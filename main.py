@@ -1,5 +1,9 @@
 import requests
 import json
+from flask import Flask, request, redirect, url_for
+
+# Initialize Flask app
+app = Flask(__name__)
 
 # Replace with your own values
 TOKEN = "YOUR_BOT_TOKEN"
@@ -39,3 +43,24 @@ users = read_users_from_file(USER_FILE)
 for user in users:
     user_id, access_token = user.split(",")
     add_user_to_guild(user_id, access_token)
+
+# Flask routes
+@app.route("/")
+def index():
+    return "Welcome to the Discord Login Page!"
+
+@app.route("/login")
+def login():
+    # Redirect to Discord OAuth2 login page
+    return redirect("https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=http://localhost:5000/callback&response_type=code&scope=identify")
+
+@app.route("/callback")
+def callback():
+    # Handle callback after user authorizes the app
+    code = request.args.get("code")
+    # Exchange the code for access token and refresh token (implement this part)
+    # Store the tokens in your database or file
+    return "Callback received. Tokens stored."
+
+if __name__ == "__main__":
+    app.run(debug=True)
