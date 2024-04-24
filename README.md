@@ -1,7 +1,8 @@
 # Discord Auto-Join Bot
 
 ## Features
-> Add Users to Guild\n
-> Verification Site\n
-> Automatically Add Roles for User
+> This program has many features tailored for the user experience.
+- Add Users to Guild
+- Verification Site
+- Automatically Add Roles for User
 [![T]](https://github.com/user/repository/subscription)
