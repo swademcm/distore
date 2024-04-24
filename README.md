@@ -5,4 +5,6 @@
 - Add Users to Guild
 - Verification Site
 - Automatically Add Roles for User
-[![T]](https://github.com/user/repository/subscription)
+
+
+[Check out my portfolio here:](https://github.com/swademcm)
