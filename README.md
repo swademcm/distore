@@ -1,4 +1,4 @@
-# Discord Auto-Join Bot
+# Distore (Discord Auto-Join Bot)
 
 ## Features
 > This program has many features tailored for the user experience.
